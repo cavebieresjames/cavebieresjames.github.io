@@ -1,1 +1,106 @@
+ <!DOCTYPE html>
 
+<html lang="fr" ng-app="beerStore">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="css/css.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/dirPagination.js"></script>
+  <script type="text/javascript" src="js/beer.js"></script>
+  </head>
+
+  <body ng-controller="StoreController as store" class="container-fluid">
+
+  <div class="row float-center">
+      <img class="hidden-xs" src="img/titre.png"/>
+      <img class="hidden-sm hidden-lg hidden-md" src="img/small.png"/>
+  </div>
+
+  <form class="row margin-top">
+      <div class="form-group col-sm-offset-4 col-sm-4 col-xs-offset-1 col-xs-10">
+          <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-search"></i></div>
+              <input type="text" class="form-control" placeholder="Filtrer par Nom ou par Style" ng-model="searchBeer">
+          </div>
+      </div>
+  </form>
+
+  <div class="list row">
+      <span ng-class="imgClassAll" class="col-sm-offset-3 col-sm-1 col-xs-4"><a href="#" ng-click="color='';changeClass()"><div><img src="img/all.png" width="60" height="60" class="img-circle"></div><div>Toutes</div></a></span>
+      <span ng-class="imgClassBlanche" class="col-sm-1 col-xs-4"><a href="#" ng-click="color='Blanche';changeClass()"><div><img src="img/blanche.png" width="60" height="60" class="img-circle"></div><div>Blanches</div></a></span>
+      <span ng-class="imgClassBlonde" class="col-sm-1 col-xs-4"><a href="#" ng-click="color='Blonde';changeClass()"><div><img src="img/blonde.png" width="60" height="60" class="img-circle"></div><div>Blondes</div></a></span>
+      <span ng-class="imgClassAmbree" class="col-sm-1 col-xs-4"><a href="#" ng-click="color='Ambrée';changeClass()"><div><img src="img/ambre.png" width="60" height="60" class="img-circle" ></div><div>Ambrées</div></a></span>
+      <span ng-class="imgClassRubis" class="col-sm-1 col-xs-4"><a href="#" ng-click="color='Rubis';changeClass()"><div><img src="img/rubis.png" width="60" height="60" class="img-circle"></div><div>Rubis</div></a></span>
+      <span ng-class="imgClassBrune" class="col-sm-1 col-xs-4"><a href="#" ng-click="color='Brune';changeClass()"><div><img src="img/brune.png" width="60" height="60" class="img-circle"></div><div>Brunes</div></a></span>
+  </div>
+
+  <table class="table table-bordered table-hover">
+
+      <thead>
+          <tr>
+              <th class="width-380">
+                  <a href="#" ng-click="sortType='Nom';sortReverse=!sortReverse">Nom
+                  <span ng-show="sortType == 'Moyenne'" class="glyphicon glyphicon-sort"></span>
+                  <span ng-show="sortType == 'Nom'&& !sortReverse" class="glyphicon glyphicon-sort-by-alphabet"></span>
+                  <span ng-show="sortType == 'Nom'&& sortReverse" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+                  </a>
+              </th>
+              <th class="width-80 hidden-xs hidden-sm">Couleur</th>
+              <th class="width-120 hidden-xs hidden-sm">Style</th>
+              <th class="width-80 hidden-xs hidden-sm">Authenticité</th>
+              <th class="width-80 hidden-xs hidden-sm">Equilibre</th>
+              <th class="width-80 hidden-xs hidden-sm">Longueur</th>
+              <th class="width-80 hidden-xs hidden-sm">Amertume</th>
+              <th class="width-80 hidden-xs hidden-sm">Fruité</th>
+              <th class="width-80 hidden-xs hidden-sm">Aspect</th>
+              <th class="width-80 hidden-xs hidden-sm">Mousse</th>
+              <th class="width-80 hidden-xs hidden-sm">Bonus</th>
+              <th class="width-120">
+                  <a href="#" ng-click="sortType='Moyenne';sortReverse=!sortReverse">Moyenne
+                  <span ng-show="sortType == 'Nom'" class="glyphicon glyphicon-sort"></span>
+                  <span ng-show="sortType == 'Moyenne'&& !sortReverse" class="glyphicon glyphicon-sort-by-order"></span>
+                  <span ng-show="sortType == 'Moyenne'&& sortReverse" class="glyphicon glyphicon-sort-by-order-alt"></span>
+                  </a>
+              </th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr  dir-paginate="beer in store.beers | orderBy:sortType:sortReverse | filter:searchBeer | filter:color | itemsPerPage: 15">
+            <td>{{beer.Nom}}
+              <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_filled-25.png" title="Pression" width="20" ng-show="beer.Pression=='y'">
+              <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_bottle_filled-25.png" title="Bouteille" width="20" ng-show="beer.Pression=='n'">
+            </td>
+            <td class="hidden-xs hidden-sm">{{beer.Couleur}}</td>
+            <td class="hidden-xs hidden-sm">{{beer.Style}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Authenticite}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Equilibre}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Longueur}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Amertume}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Fruite}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Aspect}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Mousse}}</td>
+            <td class="fig hidden-xs hidden-sm">{{beer.Bonus}}</td>
+            <td class="fig">{{beer.Moyenne}}</td>
+        </tr>
+      </tbody>
+  </table>
+
+  <dir-pagination-controls
+          max-size="7">
+  </dir-pagination-controls>
+
+  <span class="proudly hidden-xs">Proudly hosted by <img src="img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding"></span>
+
+  </body>
+
+</html>

@@ -1,0 +1,155 @@
+/*My CSS*/
+
+/* Webfont: Lato-Black */@font-face {
+    font-family: 'LatoWebBlack';
+    src: url('../fonts/Lato-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Lato-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.float-center{
+text-align: center;
+    margin-top: 5px;
+}
+
+body{
+    background-image: url("../img/437743.jpg");
+    font-family: LatoWebBlack,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+table>tbody>tr>td{
+    border: 1px solid rgba(40, 40, 40, 1) !important;
+}
+
+tbody
+{
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+th
+{
+    padding: 2px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid rgba(40, 40, 40, 0) !important;
+    border-bottom: 1px solid rgba(40, 40, 40, 1) !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+th>a, th>a:hover, th>a:visited{
+    color: #985f0d;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #000;
+    cursor: default;
+    background-color: rgba(238, 229, 157,1);
+    border-color: #ddd;
+}
+
+.pagination>li>a, .pagination>li>span{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #000;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(40, 40, 40, 0.7) !important;
+}
+
+.pagination>li>a:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: rgba(40, 40, 40, 0.7) !important;
+}
+
+
+.pagination>.disabled>a, .pagination>.disabled>a:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(40, 40, 40, 0.7) !important;
+}
+
+.pagination{
+    margin-bottom: 5px;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: rgba(238, 229, 157, 0.8);
+}
+
+.width-80{
+     width: 80px;
+ }
+.width-380{
+    width:380px;
+}
+.width-120{
+    width: 120px;
+}
+
+.fig{
+    text-align: center;
+}
+
+.list{
+    margin-bottom: 10px;
+}
+
+.list>span{
+    text-align: center;
+}
+
+.list>span>a{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.list>span>a>div>img:hover{
+    border-radius: 50%;
+    border: 2px solid #000
+}
+
+.transp {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.over img{
+    border-radius: 50%;
+    border: 2px solid #000
+}
+
+.proudly{
+    color: white;
+    text-shadow: -2px 2px 4px #000000;
+    float: right;
+    margin-top: 15px;
+}
+
+table{
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 1170px) {
+    th, tr, .pagination{
+        font-size: 13px !important;
+    }
+}
+
