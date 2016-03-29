@@ -18,9 +18,15 @@ text-align: center;
 
 body{
     background-image: url("../img/437743.jpg");
+    background-repeat: no-repeat;
     font-family: LatoWebBlack,"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@media (max-width: 1350px){
+    body{
+        background-size: cover;
+    }
+}
 .margin-top{
     margin-top: 20px;
 }
@@ -119,6 +125,7 @@ th>a, th>a:hover, th>a:visited{
     margin: 10px;
     color: #000;
     text-decoration: none;
+    text-shadow: 0 0 5px #fff;
 }
 
 .list>span>a>div>img:hover{
@@ -141,6 +148,13 @@ th>a, th>a:hover, th>a:visited{
     text-shadow: -2px 2px 4px #000000;
     float: right;
     margin-top: 15px;
+}
+
+.proudly2{
+    color: #000;
+    text-shadow: 0 0 5px #fff;
+    margin-top: 15px;
+    font-size: 16px;
 }
 
 table{

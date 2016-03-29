@@ -34,7 +34,8 @@
                 $scope.imgClassBlonde="";
                 $scope.imgClassAmbree="";
                 $scope.imgClassRubis="";
-                $scope.imgClassBrune="";}
+                $scope.imgClassBrune="";
+            pagination.current=1;}
         };
 
         $scope.beers = store.beers;
