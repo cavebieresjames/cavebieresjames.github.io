@@ -18,7 +18,7 @@ text-align: center;
 
 body{
     background-image: url("../img/437743.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: auto;
     font-family: LatoWebBlack,"Helvetica Neue", Helvetica, Arial, sans-serif;}
 
