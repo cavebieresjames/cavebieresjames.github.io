@@ -9,6 +9,7 @@
         $scope.sortReverse  = false;  // set the default sort order
         $scope.searchBeer   = '';     // set the default search/filter term
         $scope.color = '';
+        $scope.display= false;
         $scope.imgClassAll="over";
 
         $scope.changeClass = function(){
@@ -34,11 +35,14 @@
                 $scope.imgClassBlonde="";
                 $scope.imgClassAmbree="";
                 $scope.imgClassRubis="";
-                $scope.imgClassBrune="";
-            pagination.current=1;}
+                $scope.imgClassBrune="";}
         };
 
         $scope.beers = store.beers;
+
+        $scope.pick=function(){
+
+        }
 
 
     }]);

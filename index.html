@@ -79,11 +79,12 @@
 
       <tbody>
         <tr  dir-paginate="beer in store.beers | orderBy:sortType:sortReverse | filter:searchBeer | filter:color | itemsPerPage: 15">
-            <td>{{beer.Nom}}
+            <td ng-click="display=!display">{{beer.Nom}}
               <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_filled-25.png" title="Pression" width="20" ng-show="beer.Pression=='y'">
               <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_bottle_filled-25.png" title="Bouteille" width="20" ng-show="beer.Pression=='n'">
+                <div ng-show="display" class="hidden-md hidden-lg style">{{beer.Couleur}} - {{beer.Style}}</div>
             </td>
-            <td class="hidden-xs hidden-sm">{{beer.Couleur}}</td>
+            <td class="hidden-sm  hidden-xs">{{beer.Couleur}}</td>
             <td class="hidden-xs hidden-sm">{{beer.Style}}</td>
             <td class="fig hidden-xs hidden-sm">{{beer.Authenticite}}</td>
             <td class="fig hidden-xs hidden-sm">{{beer.Equilibre}}</td>
