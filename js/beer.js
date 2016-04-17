@@ -40,11 +40,6 @@
 
         $scope.beers = store.beers;
 
-        $scope.pick=function(){
-
-        }
-
-
     }]);
 
 
