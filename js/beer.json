@@ -957,5 +957,35 @@
       "Mousse": 1,
       "Bonus": 0,
       "Moyenne": 11
-    }
+    },
+  {
+    "Nom": "De Dochter Van de Korenaar Sans Pardon",
+    "Pression": "n",
+    "Couleur": "Brune",
+    "Style": "Stout",
+    "Authenticite": 2,
+    "Equilibre": 1,
+    "Longueur": 2,
+    "Amertume": 1,
+    "Fruite": 0,
+    "Aspect": 2,
+    "Mousse": 2,
+    "Bonus": 1,
+    "Moyenne": 16
+  },
+  {
+    "Nom": "Anosteke Prestige",
+    "Pression": "n",
+    "Couleur": "Blonde",
+    "Style": "Belgian Pale Ale",
+    "Authenticite": 2,
+    "Equilibre": 2,
+    "Longueur": 1,
+    "Amertume": 2,
+    "Fruite": 1,
+    "Aspect": 2,
+    "Mousse": 2,
+    "Bonus": 1,
+    "Moyenne": 18
+  }
     ]
