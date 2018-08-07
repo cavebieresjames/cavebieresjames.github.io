@@ -1529,4 +1529,20 @@
     "Bonus": 0,
     "Moyenne": 15
   }
+,
+  {
+    "Nom": "Grimbergen Triple d'Abbaye",
+    "Pression": "n",
+    "Couleur": "Blonde",
+    "Style": "Triple",
+    "Authenticite": 2,
+    "Equilibre": 1,
+    "Longueur": 1,
+    "Amertume": 0,
+    "Fruite": 1,
+    "Aspect": 1,
+    "Mousse": 1,
+    "Bonus": 0,
+    "Moyenne": 11
+  }
 ]
